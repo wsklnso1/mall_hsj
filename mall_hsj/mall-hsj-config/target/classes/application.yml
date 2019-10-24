@@ -5,7 +5,7 @@ eureka: #注册到注册中心
   client:
     serviceUrl:
 #      defaultZone: http://119.23.27.78:8761/eureka
-      defaultZone: http://127.0.0.1:8761/eureka
+      defaultZone: http://localhost:8761/eureka/
   instance:
     hostname: ${spring.cloud.client.ipAddress}
     prefer-ip-address: true
@@ -19,9 +19,9 @@ spring:
     config:
       server:
         git:
-          uri: https://github.com/wsklnso1/1stRepo.git #配置git仓库地址
+          uri: https://github.com/wsklnso1/mall_hsj.git #配置git仓库地址
           #指定搜索路径，config-server会自动搜索根目录和指定目录（逗号分隔）下的文件
-          search-paths: learn-cloud-config/cloud-config-core,learn-cloud-config/cloud-config-single/{application}
+          search-paths: config-file/first-config,config-file/second-config/{application}
 
   #从本地获取配置文件
 #  profiles:
